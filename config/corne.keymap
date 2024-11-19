@@ -101,8 +101,8 @@
             bindings = <
 &none  &kp EXCL      &kp AT         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH               &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
 &none  &kp QUESTION  &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE                &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
-&none  &kp           &kp            &kp LBKT              &kp RBKT               &kp NON_US_BACKSLASH    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
-                                    &kp LGUI              &kp                    &kp SPACE               &kp RET    &kp        &kp RALT
+&none  &none         &none          &kp LBKT              &kp RBKT               &kp NON_US_BACKSLASH    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
+                                    &kp LGUI              &none                  &kp SPACE               &kp RET    &none      &kp RALT
             >;
         };
     };
