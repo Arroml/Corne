@@ -6,8 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-// Aktivieren der Unicode-Unterstützung (falls nicht bereits vorhanden)
-&kp U_ACUTE  // Unicode-Modifikator für Sonderzeichen
 
 #define UM_AE    UC(0x00E4)  // ä
 #define UM_OE    UC(0x00F6)  // ö
