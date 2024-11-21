@@ -34,18 +34,6 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 3>;
         };
-
-        Layer: Layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <36 37 38 39 40 41>;
-        };
     };
 
     combos {
@@ -55,6 +43,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <16 15>;
             layers = <0>;
+        };
+
+        AE {
+            bindings = <&kp SQT>;
+            key-positions = <19 20>;
+        };
+
+        UE {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <20 21>;
+        };
+
+        SZ {
+            bindings = <&kp MINUS>;
+            key-positions = <21 22>;
         };
     };
 
@@ -69,10 +72,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q                &kp W        &kp E            &kp R              &kp T          &kp Y    &kp U               &kp I        &kp O        &kp P                     &trans
-&trans  &hml LEFT_CONTROL A  &hml LALT S  &hml LGUI D      &hml LEFT_SHIFT F  &kp G          &kp H    &hmr RIGHT_SHIFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL DOUBLE_QUOTES  &trans
-&trans  &kp Z                &kp X        &kp C            &kp V              &kp B          &kp N    &kp M               &kp COMMA    &kp DOT      &kp MINUS                 &trans
-                                          &lt 3 BACKSPACE  &lt 2 TAB          &lt 1 SPACE    &kp RET  &kp PAGE_DOWN       &kp PAGE_UP
+&trans  &kp Q                &kp W        &kp E            &kp R              &kp T          &kp Y        &kp U               &kp I        &kp O        &kp P                 &trans
+&trans  &hml LEFT_CONTROL A  &hml LALT S  &hml LGUI D      &hml LEFT_SHIFT F  &kp G          &kp H        &hmr RIGHT_SHIFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL SEMICOLON  &trans
+&trans  &kp Z                &kp X        &kp C            &kp V              &kp B          &kp N        &kp M               &kp COMMA    &kp PERIOD   &kp SLASH             &trans
+                                          &lt 3 BACKSPACE  &hml LGUI TAB      &lt 1 SPACE    &lt 2 ENTER  &kp ESCAPE          &kp DEL
             >;
         };
 
@@ -99,10 +102,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL          &kp TILDE          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND           &kp CARET   &kp PERCENT  &kp ASTRK  &kp LPAR       &kp QUESTION  &trans
-&trans  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE                &kp DOLLAR  &kp EQUAL    &kp PLUS   &kp AT_SIGN    &kp HASH      &trans
-&trans  &kp LESS_THAN     &kp GREATER_THAN   &kp LBKT              &kp RBKT               &kp NON_US_BACKSLASH    &kp UNDER   &kp SLASH    &kp MINUS  &kp SEMICOLON  &kp COLON     &trans
-                                             &trans                &trans                 &trans                  &kp RET     &trans       &trans
+&trans  &kp LS(NUMBER_1)   &kp LA(N)         &kp LA(N8)  &kp LA(N9)        &kp LS(NUMBER_6)    &kp CARET         &kp PERCENT  &kp LS(RIGHT_BRACKET)  &kp LPAR   &kp LS(MINUS)         &trans
+&trans  &kp LS(BACKSLASH)  &kp LS(NUMBER_2)  &kp LS(N8)  &kp LS(N9)        &kp LA(N7)          &kp LS(NUMBER_4)  &kp LS(N0)   &kp RIGHT_BRACKET      &kp LA(L)  &kp NON_US_BACKSLASH  &trans
+&trans  &kp GRAVE          &kp LS(GRAVE)     &kp LA(N5)  &kp LA(NUMBER_6)  &kp LA(LS(N7))      &trans            &kp SLASH    &kp LS(N7)             &trans     &trans                &trans
+                                             &trans      &trans            &trans              &kp RET           &trans       &trans
             >;
         };
 
