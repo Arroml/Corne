@@ -69,6 +69,20 @@
             bindings = <&kp A &kp R &kp N6 &kp N0 &kp N3 &kp N8 &kp LA(L) &kp N9 &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "MAIL";
         };
+
+        Anschreiben: Anschreiben {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp E &kp H &kp R &kp SPACE &kp G &kp E &kp E &kp H &kp R &kp T &kp E &kp SPACE &kp LS(D) &kp A &kp M &kp E &kp N &kp SPACE &kp U &kp N &kp D &kp SPACE &kp LS(H) &kp E &kp R &kp R &kp E &kp N &kp COMMA &kp RET>;
+            label = "ANSCHREIBEN";
+        };
+
+        mfg: mfg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(M) &kp I &kp T &kp SPACE &kp F &kp R &kp E &kp U &kp N &kp D &kp L &kp I &kp C &kp H &kp E &kp N &kp SPACE &kp G &kp R &kp LBKT &kp MINUS &kp E &kp N &kp SPACE &kp RET &kp LS(A) &kp L &kp E &kp X &kp A &kp N &kp D &kp E &kp R &kp SPACE &kp LS(R) &kp O &kp M &kp A &kp N>;
+            label = "MFG";
+        };
     };
 
     keymap {
@@ -121,10 +135,10 @@
 
         layer_3 {
             bindings = <
-&trans  &kp F1          &kp F2            &kp F3      &kp F4        &kp F5             &kp F6  &kp F7  &kp F8  &kp F9  &kp F10           &trans
-&trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOLUME_UP    &trans  &trans  &trans  &Mail   &trans            &trans
-&trans  &bt BT_PRV      &bt BT_NXT        &trans      &trans        &trans             &trans  &trans  &trans  &trans  &kp C_SLEEP_MODE  &trans
-                                          &trans      &trans        &trans             &trans  &trans  &trans
+&trans  &kp F1          &kp F2            &kp F3      &kp F4        &kp F5                  &kp F6  &kp F7        &kp F8        &kp F9  &kp F10                 &trans
+&trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOLUME_UP         &trans  &trans        &trans        &Mail   &trans                  &trans
+&trans  &bt BT_PRV      &bt BT_NXT        &trans      &trans        &kp LS(LG(NUMBER_4))    &trans  &Anschreiben  &Anschreiben  &trans  &kp LG(LA(DOWN_ARROW))  &trans
+                                          &trans      &trans        &trans                  &trans  &trans        &trans
             >;
         };
     };
