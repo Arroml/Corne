@@ -66,7 +66,7 @@
         Mail: Mail {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp A &kp R &kp N6 &kp N0 &kp N3 &kp N8 &kp LA(L) &kp N9 &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp A &kp R &kp N6 &kp N0 &kp N3 &kp N8 &kp N9 &kp LA(L) &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "MAIL";
         };
 
@@ -111,10 +111,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1                    &kp N2                &kp N3                     &kp N4                         &kp N5        &kp N6    &kp N7    &kp N8     &kp N9      &kp N0     &trans
-&trans  &hmr LEFT_CONTROL LS(N5)  &hmr LEFT_ALT LS(N7)  &hmr LEFT_GUI RIGHT_BRACE  &hml LEFT_SHIFT RIGHT_BRACKET  &kp LS(N0)    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT   &kp ENTER  &trans
-&trans  &trans                    &trans                &trans                     &trans                         &trans        &trans    &kp HOME  &kp COMMA  &kp PERIOD  &kp SLASH  &trans
-                                                        &kp BACKSPACE              &kp TAB                        &kp SPACE     &trans    &trans    &trans
+&trans  &kp N1                    &kp N2                &kp N3                     &kp N4              &kp N5                   &kp N6    &kp N7    &kp N8     &kp N9      &kp N0     &trans
+&trans  &hmr LEFT_CONTROL LS(N5)  &hmr LEFT_ALT LS(N7)  &hmr LEFT_GUI RIGHT_BRACE  &hml LEFT_SHIFT N0  &kp LS(RIGHT_BRACKET)    &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT   &kp ENTER  &trans
+&trans  &kp GRAVE                 &kp TILDE             &trans                     &trans              &trans                   &trans    &kp HOME  &kp COMMA  &kp PERIOD  &kp SLASH  &trans
+                                                        &kp BACKSPACE              &kp TAB             &kp SPACE                &trans    &trans    &trans
             >;
         };
 
@@ -126,10 +126,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LS(NUMBER_1)   &kp LA(N)         &kp LA(N8)  &kp LA(N9)        &trans    &kp CARET         &kp PERCENT       &kp LS(RIGHT_BRACKET)  &kp LPAR   &kp LS(MINUS)  &trans
-&trans  &kp LS(BACKSLASH)  &kp LS(NUMBER_2)  &kp LS(N8)  &kp LS(N9)        &trans    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(N7)             &kp LA(L)  &kp BACKSLASH  &trans
-&trans  &kp GRAVE          &kp LS(GRAVE)     &kp LA(N5)  &kp LA(NUMBER_6)  &trans    &trans            &kp SLASH         &kp LS(LA(N7))         &trans     &trans         &trans
-                                             &trans      &trans            &trans    &kp RET           &trans            &trans
+&trans  &kp LS(NUMBER_1)   &kp LA(N)         &kp LA(N8)  &kp LA(N9)        &trans        &kp CARET         &kp PERCENT       &kp LS(LA(N7))  &kp LPAR        &kp LS(MINUS)  &trans
+&trans  &kp LS(BACKSLASH)  &kp LS(NUMBER_2)  &kp LS(N8)  &kp LS(N8)        &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(N7)      &kp LA(L)       &kp BACKSLASH  &trans
+&trans  &kp GRAVE          &kp LS(GRAVE)     &kp LA(N5)  &kp LA(NUMBER_6)  &trans        &trans            &kp SLASH         &kp LA(COMMA)   &kp LS(PERIOD)  &kp LS(SLASH)  &trans
+                                             &trans      &trans            &trans        &kp RET           &trans            &trans
             >;
         };
 
