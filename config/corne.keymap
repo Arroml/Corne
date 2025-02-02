@@ -135,8 +135,8 @@
         layer_3 {
             bindings = <
 &trans  &kp F1   &kp F2     &kp F3             &kp F4           &kp F5                      &kp F6  &kp F7        &kp F8        &kp F9  &kp F10                 &trans
-&trans  &kp F11  &kp F12    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(Y)                   &trans  &trans        &trans        &Mail   &trans                  &trans
-&trans  &trans   &kp LG(X)  &kp LG(C)          &kp LG(V)        &kp LS(LG(LC(NUMBER_4)))    &trans  &Anschreiben  &Anschreiben  &trans  &kp LG(LA(DOWN_ARROW))  &trans
+&trans  &kp F11  &kp F12    &kp C_VOLUME_DOWN  &kp KC_MS_BTN1  &kp LG(Y)                   &KC_MS_LEFT  &KC_MS_DOWN       &KC_MS_UP        &KC_MS_RIGHT   &trans                  &trans
+&trans  &trans   &kp LG(X)  &kp LG(C)          &kp LG(V)        &kp LS(LG(LC(NUMBER_4)))    &trans  &KC_MS_WH_DOWN   &KC_MS_WH_UP  &trans  &kp LG(LA(DOWN_ARROW))  &trans
                             &trans             &trans           &trans                      &trans  &trans        &trans
             >;
         };
