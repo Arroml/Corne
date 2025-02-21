@@ -20,6 +20,9 @@
     acceleration-exponent = <20>;
 };
 
+&tog {
+};
+
 / {
     behaviors {
         hmr: hmr {
@@ -147,10 +150,19 @@
 
         layer_3 {
             bindings = <
-&trans  &kp F1          &kp F2     &kp F3        &kp F4        &kp F5                      &kp F6          &kp F7          &kp F8        &kp F9           &kp F10                 &trans
-&trans  &kp F11         &kp F12    &bt BT_SEL 1  &bt BT_SEL 0  &kp LG(Y)                   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans                  &trans
-&trans  &bt BT_CLR_ALL  &kp LG(X)  &kp LG(C)     &kp LG(V)     &kp LS(LG(LC(NUMBER_4)))    &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &kp LG(LA(DOWN_ARROW))  &trans
-                                   &trans        &trans        &trans                      &trans          &trans          &trans
+&trans  &kp F1          &kp F2     &kp F3        &kp F4        &kp F5                      &kp F6          &kp F7             &kp F8        &kp F9           &kp F10                 &trans
+&trans  &kp F11         &kp F12    &bt BT_SEL 1  &bt BT_SEL 0  &kp LG(Y)                   &mmv MOVE_LEFT  &kp C_VOL_UP       &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans                  &trans
+&trans  &bt BT_CLR_ALL  &kp LG(X)  &kp LG(C)     &kp LG(V)     &kp LS(LG(LC(NUMBER_4)))    &trans          &kp C_VOLUME_DOWN  &msc SCRL_UP  &tog 4           &kp LG(LA(DOWN_ARROW))  &trans
+                                   &trans        &trans        &trans                      &trans          &trans             &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &kp ESC    &kp N1  &kp N2    &kp N3    &kp N4       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TAB    &kp Q   &kp W     &kp E     &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp A   &kp S     &kp D     &kp F        &trans  &trans  &trans  &tog 0  &trans  &trans
+                           &kp LALT  &kp LGUI  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
