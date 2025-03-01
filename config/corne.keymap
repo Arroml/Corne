@@ -141,7 +141,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp LA(N8)        &kp LA(N8)  &kp LA(N9)    &kp CARET         &kp PERCENT       &kp LA(RIGHT_BRACKET)  &kp LPAR        &kp LS(MINUS)  &trans
+&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp LA(N8)        &kp LA(N8)  &kp LA(N9)    &kp CARET         &kp PERCENT       &kp LA(RIGHT_BRACKET)  &kp LS(EQUAL)   &kp LS(MINUS)  &trans
 &trans  &kp BACKSLASH     &kp LS(BACKSLASH)  &kp LS(NUMBER_2)  &kp LS(N8)  &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(GRAVE)          &kp LA(Q)       &kp BACKSLASH  &trans
 &trans  &kp GRAVE         &kp LS(GRAVE)      &kp LA(N5)        &kp LA(N7)  &kp LA(N0)    &trans            &kp SLASH         &kp LA(MINUS)          &kp LS(PERIOD)  &kp LS(SLASH)  &trans
                                              &trans            &trans      &trans        &kp RET           &trans            &trans
