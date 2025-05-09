@@ -57,12 +57,12 @@
       bindings = <&msc SCRL_DOWN>;
     };
 
-    scroll_down_fast: scroll_up_fast {
+    scroll_down_fast: scroll_down_fast {
       compatible = "zmk,behavior-repeat";
       label = "ScrollDownFast";
       delay-ms = <50>;
       interval-ms = <20>;
-      bindings = <&msc SCRL_UP>;
+      bindings = <&msc SCRL_DOWN>;
     };
 
 
@@ -182,7 +182,7 @@
     macF {
       bindings = <
         &trans  &kp F1      &kp F2   &kp F3        &kp F4      &kp F5                      &kp F6           &kp F7          &kp F8        &kp F9             &kp F10                 &trans
-        &trans  &kp F11     &kp F12  &switchLinux  &switchMac  &trans                      &kp C_VOLUME_UP  &msc scroll_down_fast  &msc scroll_up_fast  &kp C_VOLUME_DOWN  &trans                  &trans
+        &trans  &kp F11     &kp F12  &switchLinux  &switchMac  &trans                      &kp C_VOLUME_UP  &msc SCRL_DOWN  &msc SCRL_UP  &kp C_VOLUME_DOWN  &trans                  &trans
         &trans  &bt BT_CLR  &trans   &trans        &trans      &kp LS(LG(LC(NUMBER_4)))    &trans           &trans          &trans        &trans             &kp LG(LA(DOWN_ARROW))  &trans
         &trans        &trans      &trans                      &trans           &trans          &trans
       >;
@@ -218,7 +218,7 @@
     linuxF {
       bindings = <
         &trans  &kp F1      &kp F2   &kp F3        &kp F4      &kp F5                      &kp F6           &kp F7          &kp F8        &kp F9             &kp F10                 &trans
-        &trans  &kp F11     &kp F12  &switchLinux  &switchMac  &trans                      &kp C_VOLUME_UP  &msc scroll_down_fast  &msc scroll_up_fast  &kp C_VOLUME_DOWN  &trans                  &trans
+        &trans  &kp F11     &kp F12  &switchLinux  &switchMac  &trans                      &kp C_VOLUME_UP  &msc SCRL_DOWN  &msc SCRL_UP  &kp C_VOLUME_DOWN  &trans                  &trans
         &trans  &bt BT_CLR  &trans   &trans        &trans      &kp LS(LG(LC(NUMBER_4)))    &trans           &trans          &trans        &trans             &kp LG(LA(DOWN_ARROW))  &trans
         &trans        &trans      &trans                      &trans           &trans          &trans
       >;
