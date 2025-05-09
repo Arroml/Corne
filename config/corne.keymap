@@ -97,6 +97,20 @@
             bindings = <&none &kp LS(M) &kp I &kp T &kp SPACE &kp F &kp R &kp E &kp U &kp N &kp D &kp L &kp I &kp C &kp H &kp E &kp N &kp SPACE &kp G &kp R &kp LBKT &kp MINUS &kp E &kp N &kp SPACE &kp RET &kp LS(A) &kp L &kp E &kp X &kp A &kp N &kp D &kp E &kp R &kp SPACE &kp LS(R) &kp O &kp M &kp A &kp N>;
             label = "MFG";
         };
+
+        switchMac: switchMac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &tog 0>;
+            label = "SWITCHMAC";
+        };
+
+        switchLinux: switchLinux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &tog 4>;
+            label = "SWITCHLINUX";
+        };
     };
 
     keymap {
@@ -140,19 +154,55 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp LA(N8)        &kp LA(N8)  &kp LA(N9)    &kp CARET         &kp PERCENT       &kp LA(RIGHT_BRACKET)  &kp LS(EQUAL)   &kp LS(MINUS)  &trans
-&trans  &kp BACKSLASH     &kp LS(BACKSLASH)  &kp LS(NUMBER_2)  &kp LS(N8)  &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(GRAVE)          &kp LA(Q)       &kp BACKSLASH  &trans
-&trans  &kp GRAVE         &kp LS(GRAVE)      &kp LA(N5)        &kp LA(N7)  &kp LA(N0)    &trans            &kp SLASH         &kp LA(MINUS)          &kp LS(PERIOD)  &kp LS(SLASH)  &trans
-                                             &trans            &trans      &trans        &kp RET           &trans            &trans
+&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp LA(N8)                  &kp LA(N8)              &kp LA(N9)    &kp CARET         &kp PERCENT       &kp LA(RIGHT_BRACKET)  &kp LS(EQUAL)   &kp LS(MINUS)  &trans
+&trans  &kp BACKSLASH     &kp LS(BACKSLASH)  &hml LEFT_GUI LS(NUMBER_2)  &hml LEFT_SHIFT LS(N8)  &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(GRAVE)          &kp LA(Q)       &kp BACKSLASH  &trans
+&trans  &kp GRAVE         &kp LS(GRAVE)      &kp LA(N5)                  &kp LA(N7)              &kp LA(N0)    &trans            &kp SLASH         &kp LA(MINUS)          &kp LS(PERIOD)  &kp LS(SLASH)  &trans
+                                             &trans                      &trans                  &trans        &kp RET           &trans            &trans
             >;
         };
 
         macF {
             bindings = <
-&trans  &kp F1      &kp F2   &kp F3        &kp F4        &kp F5                      &kp F6           &kp F7             &kp F8        &kp F9             &kp F10                 &trans
-&trans  &kp F11     &kp F12  &bt BT_SEL 1  &bt BT_SEL 0  &trans                      &kp C_VOLUME_UP  &msc SCRL_DOWN     &msc SCRL_UP  &kp C_VOLUME_DOWN  &trans                  &trans
-&trans  &bt BT_CLR  &trans   &trans        &trans        &kp LS(LG(LC(NUMBER_4)))    &trans           &kp C_VOLUME_DOWN  &msc SCRL_UP  &trans             &kp LG(LA(DOWN_ARROW))  &trans
-                             &trans        &trans        &trans                      &trans           &trans             &trans
+&trans  &kp F1      &kp F2   &kp F3        &kp F4      &kp F5                      &kp F6           &kp F7          &kp F8        &kp F9             &kp F10                 &trans
+&trans  &kp F11     &kp F12  &switchLinux  &switchMac  &trans                      &kp C_VOLUME_UP  &msc SCRL_DOWN  &msc SCRL_UP  &kp C_VOLUME_DOWN  &trans                  &trans
+&trans  &bt BT_CLR  &trans   &trans        &trans      &kp LS(LG(LC(NUMBER_4)))    &trans           &trans          &trans        &trans             &kp LG(LA(DOWN_ARROW))  &trans
+                             &trans        &trans      &trans                      &trans           &trans          &trans
+            >;
+        };
+
+        lunuxDefault {
+            bindings = <
+&trans  &kp Q                &kp W        &kp E          &kp R              &kp T          &kp Y        &kp U                       &kp I             &kp O        &kp P                 &trans
+&trans  &hml LEFT_CONTROL A  &hml LALT S  &hml LGUI D    &hml LEFT_SHIFT F  &kp G          &kp H        &hmr RIGHT_SHIFT J          &hmr LGUI K       &hmr LALT L  &hmr LCTRL SEMICOLON  &trans
+&trans  &kp Z                &kp X        &kp C          &kp V              &kp B          &kp N        &kp M                       &kp COMMA         &kp PERIOD   &kp SLASH             &trans
+                                          &kp BACKSPACE  &lt 7 TAB          &lt 6 SPACE    &lt 5 ENTER  &hmr LC(LA(LG(RSHFT))) SQT  &kp LEFT_BRACKET
+            >;
+        };
+
+        linuxNum {
+            bindings = <
+&trans  &kp N1                    &kp N2                &kp N3                       &kp N4                  &kp N5                     &kp N6    &kp N7    &kp N8     &kp N9      &kp N0                  &trans
+&trans  &hmr LEFT_CONTROL LS(N5)  &hmr LEFT_ALT LS(N7)  &hmr LEFT_GUI RIGHT_BRACE    &hml LEFT_SHIFT LS(N0)  &kp RIGHT_BRACKET          &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT   &kp LA(LC(LG(LS(N1))))  &trans
+&trans  &kp LG(NUBS)              &kp NON_US_BSLH       &trans                       &trans                  &kp F24                    &trans    &kp HOME  &kp COMMA  &kp PERIOD  &kp SLASH               &trans
+                                                        &hml LEFT_CONTROL BACKSPACE  &kp LEFT_ALT            &hml SPACE LEFT_COMMAND    &trans    &trans    &trans
+            >;
+        };
+
+        linuxZeichen {
+            bindings = <
+&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp LA(N8)                  &kp LA(N8)              &kp LA(N9)    &kp CARET         &kp PERCENT       &kp LA(RIGHT_BRACKET)  &kp LS(EQUAL)   &kp LS(MINUS)  &trans
+&trans  &kp BACKSLASH     &kp LS(BACKSLASH)  &hml LEFT_GUI LS(NUMBER_2)  &hml LEFT_SHIFT LS(N8)  &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(GRAVE)          &kp LA(Q)       &kp BACKSLASH  &trans
+&trans  &kp GRAVE         &kp LS(GRAVE)      &kp LA(N5)                  &kp LA(N7)              &kp LA(N0)    &trans            &kp SLASH         &kp LA(MINUS)          &kp LS(PERIOD)  &kp LS(SLASH)  &trans
+                                             &trans                      &trans                  &trans        &kp RET           &trans            &trans
+            >;
+        };
+
+        linuxF {
+            bindings = <
+&trans  &kp F1      &kp F2   &kp F3        &kp F4      &kp F5                      &kp F6           &kp F7          &kp F8        &kp F9             &kp F10                 &trans
+&trans  &kp F11     &kp F12  &switchLinux  &switchMac  &trans                      &kp C_VOLUME_UP  &msc SCRL_DOWN  &msc SCRL_UP  &kp C_VOLUME_DOWN  &trans                  &trans
+&trans  &bt BT_CLR  &trans   &trans        &trans      &kp LS(LG(LC(NUMBER_4)))    &trans           &trans          &trans        &trans             &kp LG(LA(DOWN_ARROW))  &trans
+                             &trans        &trans      &trans                      &trans           &trans          &trans
             >;
         };
     };
