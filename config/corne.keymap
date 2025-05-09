@@ -191,9 +191,9 @@
 
         linuxZeichen {
             bindings = <
-&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp LA(N8)                  &kp LA(N8)              &kp LA(N9)    &kp CARET         &kp PERCENT       &kp LA(RIGHT_BRACKET)  &kp LS(EQUAL)   &kp LS(MINUS)  &trans
-&trans  &kp BACKSLASH     &kp LS(BACKSLASH)  &hml LEFT_GUI LS(NUMBER_2)  &hml LEFT_SHIFT LS(N8)  &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp LA(GRAVE)          &kp LA(Q)       &kp BACKSLASH  &trans
-&trans  &kp GRAVE         &kp LS(GRAVE)      &kp LA(N5)                  &kp LA(N7)              &kp LA(N0)    &trans            &kp SLASH         &kp LA(MINUS)          &kp LS(PERIOD)  &kp LS(SLASH)  &trans
+&trans  &kp LS(NUMBER_1)  &kp LA(N)          &kp RA(N8)                  &kp RA(N8)              &kp RA(N9)    &kp CARET         &kp PERCENT       &kp RA(RIGHT_BRACKET)  &kp LS(EQUAL)   &kp LS(MINUS)  &trans
+&trans  &kp BACKSLASH     &kp LS(BACKSLASH)  &hml LEFT_GUI LS(NUMBER_2)  &hml LEFT_SHIFT LS(N8)  &kp LS(N9)    &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp RA(GRAVE)          &kp RA(Q)       &kp BACKSLASH  &trans
+&trans  &kp GRAVE         &kp LS(GRAVE)      &kp RA(N5)                  &kp RA(N7)              &kp RA(N0)    &trans            &kp SLASH         &kp RA(MINUS)          &kp LS(PERIOD)  &kp LS(SLASH)  &trans
                                              &trans                      &trans                  &trans        &kp RET           &trans            &trans
             >;
         };
